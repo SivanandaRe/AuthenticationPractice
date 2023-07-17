@@ -1,0 +1,12 @@
+.header{
+    background-color:dodgerblue;
+    color: white;
+    height: 50px;
+    text-align: justify;
+  }
+  
+  .footer{
+      background-color: dodgerblue;
+      color: white;
+      height: 50px;
+  }

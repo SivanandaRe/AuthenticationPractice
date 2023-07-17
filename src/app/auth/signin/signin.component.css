@@ -1,0 +1,13 @@
+.card {
+  border-radius: 10px;
+  border: solid 2px gray;
+  width: 600px;
+}
+
+.row{
+  padding-left: 300px;
+}
+
+input{
+  border-color: darkgray;
+}

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row align-items-center vh-100">
+  <div class="card">
+    <div class="card-text"><h4>Sign In</h4></div>
+    <div class="card-body">
+        <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">   
+            <div class="col-sm-9">
+              <input type="email" id="emailAddress" class="form-control" formControlName="emailAddress"/>
+              <label class="form-label" for="emailAddress">Email address</label>
+            </div>
+            <div *ngIf="signinForm.controls['emailAddress'].invalid && (signinForm.controls['emailAddress'].dirty || signinForm.controls['emailAddress'].touched)" class="alert alert-danger">
+              <div *ngIf="signinForm.controls['emailAddress'].errors">
+                Email Address is required.
+              </div>
+          </div>
+
+            <div class="col-sm-9">
+              <input type="password" id="password" class="form-control" formControlName="password"/>
+              <label class="form-label" for="password">Password</label>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary btn-block mb-4">Sign In</button> 
+                <span style="padding-left: 60px; padding-right: 25px;">Don't have an account?</span> 
+                <span style="padding-right:100px;">
+                <a class="btn btn-primary btn-block mb-4" routerLink="/auth/signup" >Sign Up</a></span>
+            </div>
+          </form> 
+    </div>
+  </div>
+</div>
+</div>
